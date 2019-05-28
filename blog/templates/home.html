@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div class="container">
+
+    <div class="row">
+        {% for post in posts %}
+            <div class="col-sm-4">
+                <div class="card mb-5" style="width: 20rem;">
+                    <img class="card-img-top" src="{{ picture }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h3>{{ post.title }}</h3>
+
+                        <div>
+                          <div class="row no-gutters">
+                            <div class="col-sm-3">
+                              <img class="rounded-circle post-user-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}" />
+                            </div>
+                            <div class="col-sm">
+                                <p class="mb-1">Organizer: {{ post.author.username }}</p>
+                                <p class="mb-1">Date: {{ post.date_posted.strftime('%Y-%m-%d') }}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!--<p class="card-text">{{ post.content }}</p>-->
+
+                    </div>
+                </div>
+
+            </div>
+            {% endfor %}
+
+    </div>
+
+</div>
+{% endblock content %}

@@ -1,0 +1,17 @@
+.account-img {
+  height: 100px;
+  width: 100px;
+  margin-right: 30px;
+  margin-bottom: 25px;
+}
+
+.post-user-img {
+  height: 50px;
+  width: 50px;
+  
+}
+
+.post-img {
+    height: 400px;
+    width: 300px;
+}
